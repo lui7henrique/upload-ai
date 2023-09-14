@@ -75,7 +75,7 @@ O projeto está dividido em duas partes:
 
    ```shell
    # Exemplo de variáveis de ambiente
-   DATABASE_URL='sqlite://./database.db'
+   DATABASE_URL='file:./dev.db'
    OPENAI_API_KEY='sua-chave-de-api-openai'
    ```
 
