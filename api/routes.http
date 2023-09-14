@@ -1,0 +1,37 @@
+# @name list-prompts
+GET http://localhost:3333/prompts
+
+###
+
+# @name upload
+POST http://localhost:3333/videos
+Content-Type: multipart/form-data; boundary=----Divider
+
+------Divider
+Content-Disposition: form-data; name="file"; filename="example.mp3"
+Content-Type: audio/mpeg
+
+< ./example.mp3
+------Divider--
+
+###
+
+# @name create-transcription
+POST http://localhost:3333/videos/72017c8f-96b1-4f1c-bb11-cc45874fd0f7/transcription
+Content-Type: application/json
+
+{
+  "prompt": "investimentos"
+}
+
+###
+
+# @name generate-ai-completion
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+  "videoId": "72017c8f-96b1-4f1c-bb11-cc45874fd0f7",
+  "temperature": 0.5,
+  "template": "Gere um resumo da transcrição do vídeo informada a seguir: '''{transcription}'''"
+}
