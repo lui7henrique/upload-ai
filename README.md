@@ -99,6 +99,6 @@ O projeto está dividido em duas partes:
 
 ## Autor
 
-Luiz Henrique - Software Engineer
+Luiz Henrique - Software developer
 
 [Linkedin](https://www.linkedin.com/in/luiz-henrique7/) | [E-mail](mailto:7henrique18@gmail.com)
