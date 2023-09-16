@@ -1,22 +1,20 @@
-
-
 ## upload.ai ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) ![Build Pending](https://img.shields.io/badge/build-pending-yellow.svg)
 
-O upload.ai é um projeto que permite aos usuários carregar vídeos (.mp4) e convertê-los em áudio (.mp3). Além disso, ele é capaz de gerar transcrições do conteúdo dos vídeos e criar respostas com base em prompts predefinidos. Isso é útil para gerar títulos e descrições para vídeos no YouTube.
+upload.ai is a project that allows users to upload videos (.mp4) and convert them to audio (.mp3). Additionally, it can generate transcriptions of video content and create responses based on predefined prompts. This is useful for generating titles and descriptions for YouTube videos.
 
-![Capa do Projeto](https://raw.githubusercontent.com/lui7henrique/upload-ai/main/cover.jpeg)
+![Project Cover](https://raw.githubusercontent.com/lui7henrique/upload-ai/main/cover.jpeg)
 
-## Funcionalidades
-- [x] Upload de vídeos e conversão para áudio
-- [x] Geração automática de transcrições de áudio
-- [x] Criação de respostas com base em prompts personalizados
+## Features
+- [x] Video upload and conversion to audio
+- [x] Automatic generation of audio transcriptions
+- [x] Creation of responses based on custom prompts
 
-## Estrutura do Projeto
-O projeto está dividido em duas partes:
-- Front-end (nomeado como "web")
-- Back-end (nomeado como "api")
+## Project Structure
+The project is divided into two parts:
+- Front-end (named "web")
+- Back-end (named "api")
 
-### Tecnologias Utilizadas (Front-end)
+### Technologies Used (Front-end)
 
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -24,81 +22,81 @@ O projeto está dividido em duas partes:
 - [ffmpeg](https://ffmpeg.org/)
 - [ai](https://github.com/fake/ai)
 
-#### Como Executar o Front-end
+#### How to Run the Front-end
 
-1. Clone o repositório do front-end:
+1. Clone the front-end repository:
 
    ```shell
-   $ git clone https://github.com/seu-usuario/upload.ai.git
+   $ git clone https://github.com/your-username/upload.ai.git
    ```
 
-2. Navegue até a pasta:
+2. Navigate to the folder:
 
    ```shell
    $ cd upload-ai && cd upload web
    ```
 
-3. Instale as dependências:
+3. Install dependencies:
 
    ```shell
    $ pnpm install
    ```
 
-4. Inicie a aplicação:
+4. Start the application:
 
    ```shell
    $ pnpm run dev
    ```
 
-### Tecnologias Utilizadas (Back-end)
+### Technologies Used (Back-end)
 
 - [Fastify](https://fastify.io/)
 - [Prisma](https://www.prisma.io/)
 - [OpenAI](https://openai.com/)
 - [zod](https://github.com/colinhacks/zod)
 
-#### Como Iniciar o Projeto Back-end
+#### How to Start the Back-end Project
 
-1. Navegue até a pasta:
+1. Navigate to the folder:
 
    ```shell
    $ cd upload.ai-api
    ```
 
-2. Instale as dependências:
+2. Install dependencies:
 
    ```shell
    $ pnpm install
    ```
 
-3. Configure as variáveis de ambiente em um arquivo `.env`.
+3. Configure environment variables in a `.env` file.
 
    ```shell
-   # Exemplo de variáveis de ambiente
+   # Example environment variables
    DATABASE_URL='file:./dev.db'
-   OPENAI_API_KEY='sua-chave-de-api-openai'
+   OPENAI_API_KEY='your-openai-api-key'
    ```
 
-3. Inicie o banco de dados: 
+4. Start the database:
 
    ```shell
    # npx prisma migrate dev 
    ```
 
-4. Popule a tabela de `prompts`
+5. Populate the `prompts` table:
 
    ```shell
    # npx prisma db seed
    ```
 
-5. Inicie o servidor:
+6. Start the server:
 
    ```shell
    $ pnpm run dev
    ```
 
-## Autor
+## Author
 
-Luiz Henrique - Software developer
+Luiz Henrique - Software Developer
 
 [Linkedin](https://www.linkedin.com/in/luiz-henrique7/) | [E-mail](mailto:7henrique18@gmail.com)
