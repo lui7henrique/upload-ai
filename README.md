@@ -1,6 +1,6 @@
 ## upload.ai ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) ![Build Pending](https://img.shields.io/badge/build-pending-yellow.svg)
 
-upload.ai is a project that allows users to upload videos (.mp4) and convert them to audio (.mp3). Additionally, it can generate transcriptions of video content and create responses based on predefined prompts. This is useful for generating titles and descriptions for YouTube videos.
+`upload.ai` is a project that allows users to upload videos (.mp4) and convert them to audio (.mp3). Additionally, it can generate transcriptions of video content and create responses based on predefined prompts. This is useful for generating titles and descriptions for YouTube videos.
 
 ![Project Cover](https://raw.githubusercontent.com/lui7henrique/upload-ai/main/cover.jpeg)
 
