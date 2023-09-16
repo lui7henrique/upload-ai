@@ -9,23 +9,26 @@
 - [x] Automatic generation of audio transcriptions
 - [x] Creation of responses based on custom prompts
 
-## Project Structure
-The project is divided into two parts:
-- Front-end (named "web")
-- Back-end (named "api")
+## Technologies
 
-### Technologies Used (Front-end)
-
+**Front-end**: 
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [axios](https://axios-http.com/)
 - [ffmpeg](https://ffmpeg.org/)
-- [ai](https://github.com/fake/ai)
+- [ai](https://www.npmjs.com/package/ai)
 
-#### How to Run the Front-end
+**Back-end**: 
+- [Fastify](https://fastify.io/)
+- [Prisma](https://www.prisma.io/)
+- [OpenAI](https://openai.com/)
+- [zod](https://github.com/colinhacks/zod)
 
-1. Clone the front-end repository:
+## How to Run:
 
+First of all, start the back-end (api) project, following these steps: 
+
+1. Clone the repository:
    ```shell
    $ git clone https://github.com/your-username/upload.ai.git
    ```
@@ -33,7 +36,7 @@ The project is divided into two parts:
 2. Navigate to the folder:
 
    ```shell
-   $ cd upload-ai && cd upload web
+   $ cd upload.ai-api
    ```
 
 3. Install dependencies:
@@ -42,25 +45,38 @@ The project is divided into two parts:
    $ pnpm install
    ```
 
-4. Start the application:
+4. Configure environment variables in a `.env` file.
+
+   ```shell
+   # Example environment variables
+   DATABASE_URL='file:./dev.db'
+   OPENAI_API_KEY='your-openai-api-key'
+   ```
+
+5. Start the database:
+
+   ```shell
+   # npx prisma migrate dev 
+   ```
+
+6. Populate the `prompts` table:
+
+   ```shell
+   # npx prisma db seed
+   ```
+
+7. Start the server:
 
    ```shell
    $ pnpm run dev
    ```
 
-### Technologies Used (Back-end)
-
-- [Fastify](https://fastify.io/)
-- [Prisma](https://www.prisma.io/)
-- [OpenAI](https://openai.com/)
-- [zod](https://github.com/colinhacks/zod)
-
-#### How to Start the Back-end Project
+Now, with the back-end project running, run the front-end project in new terminal following these steps:
 
 1. Navigate to the folder:
 
    ```shell
-   $ cd upload.ai-api
+   $ cd upload-ai && cd upload web
    ```
 
 2. Install dependencies:
@@ -69,27 +85,7 @@ The project is divided into two parts:
    $ pnpm install
    ```
 
-3. Configure environment variables in a `.env` file.
-
-   ```shell
-   # Example environment variables
-   DATABASE_URL='file:./dev.db'
-   OPENAI_API_KEY='your-openai-api-key'
-   ```
-
-4. Start the database:
-
-   ```shell
-   # npx prisma migrate dev 
-   ```
-
-5. Populate the `prompts` table:
-
-   ```shell
-   # npx prisma db seed
-   ```
-
-6. Start the server:
+3. Start the application:
 
    ```shell
    $ pnpm run dev
